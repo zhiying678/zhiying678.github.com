@@ -6,6 +6,7 @@ category: blog
 ---
 
 6/21/2014 11:50:20 AM 
+
 ```bat
 rem requre cmd /v:ON
 @echo off

@@ -5,7 +5,7 @@ pygments: true
 paginate: 8
 permalink: /:title
 
-title: www.zhiying678.com
-url: http://www.zhiying678.com
+title: zhiying678
+url: http://zhiying678.github.io
 feed: /atom.xml
-author_info: <a href="http://www.zhiying678.com/">zhiying678</a>
+author_info: <a href="http://beiyuu.com/">zhiying678</a>

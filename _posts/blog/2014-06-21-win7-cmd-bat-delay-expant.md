@@ -1,7 +1,7 @@
 ---
 layout: post
 title: win7批处理变量的延迟扩充
-description: what is what
+description: 批处理 for 中的变量 延迟扩充
 category: blog
 ---
 

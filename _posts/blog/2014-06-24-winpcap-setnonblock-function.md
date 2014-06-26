@@ -1,11 +1,31 @@
 ---
 layout: post
-title: About winpcap setnonblock function under win7
-description: find some tissue using setnonblock() function under win7
+title: using winpcap under win7
+description: some issue using winpcap function under win7
 category: blog
 ---
 
-#setnonblock() in winpcap under win7
+##PCAP_OPENFLAG_NOCAPTURE_LOCAL
+&nbsp;&nbsp;find some issue using winpcap under win7
+including setnonblock() pcap_open(),etc
+find that **PCAP_OPENFLAG_NOCAPTURE_LOCAL** flag doesn't work with *pcap_open_live()*,use *pcap_open()* works well.
+demo code below
+
+```c
+
+		if ( (fp= pcap_open(d->name,
+			65535 /*snaplen*/,
+			PCAP_OPENFLAG_PROMISCUOUS|PCAP_OPENFLAG_NOCAPTURE_LOCAL|PCAP_OPENFLAG_MAX_RESPONSIVENESS /*flags*/,
+			5000 /*read timeout*/,
+			NULL /* remote authentication */,
+			errbuf)
+			) == NULL)
+			
+			.................
+			
+			if(pcap_setnonblock(fp,1,errbuf))//set this to let the program return immediately when receive a packet.
+```
+##setnonblock() in winpcap under win7
 ---
 
 ###My develop environment:
@@ -300,6 +320,8 @@ int main(int argc,char ** argv)
 
 
 以防自己以后看不懂，汉语解释一下：
+
+0. PCAP_OPENFLAG_NOCAPTURE_LOCAL标志位只对pcap_open()有效。
 1. pcap_setnonblock()函数，当第二个参数设为非0时表示非阻塞模式，来数据包立即就能读到。
 2. 若设为0表示阻塞模式，此时
 - 若pcap_open()设置timeout为0，只有当缓冲区满时才会返回，一次处理多个数据包。

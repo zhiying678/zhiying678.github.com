@@ -9,4 +9,4 @@ category: blog
 
 
 
-[zhiying678]:    http://www.zhiying678.com  "zhiying678"
+[zhiying678]:    http://blog.houmingjiang.cn  "zhiying678"

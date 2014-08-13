@@ -1,0 +1,27 @@
+#useful for coding with vs2010
+# _ReSharper.*
+# StyleCop.Cache
+# *.cache
+# *.user
+# *.suo
+# *.ncb
+# *.sdf
+# *.opensdf
+# *.exe
+# bin/
+# obj/
+# Release/
+# Debug/
+# ipch/
+# *.ncb
+# *.sdf
+# *.opensdf
+# TypeNormalizer.exe
+# WebKit.interop.dll
+# TestResults
+# UpgradeLog.XML
+# _UpgradeReport_Files
+# JSCore/Debug
+# JSCore/Release
+# Data/
+draft/
